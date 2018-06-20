@@ -1,0 +1,37 @@
+{
+  "name": "events-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
+    "bulma-divider": "^2.0.1",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.10",
+    "node-sass": "^4.9.0",
+    "qs": "^6.5.2",
+    "register-service-worker": "^1.0.0",
+    "sass": "^1.6.1",
+    "sass-loader": "^7.0.3",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vue-routisan": "^2.1.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.2",
+    "@vue/cli-plugin-pwa": "^3.0.0-rc.2",
+    "@vue/cli-service": "^3.0.0-rc.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

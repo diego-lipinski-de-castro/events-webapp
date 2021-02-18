@@ -73,8 +73,8 @@
         name: 'auth',
         data: () => ({
             authUser: {
-                email: 'diegocastroh20@gmail.com',
-                password: '123'
+                email: 'demo@email.com',
+                password: '123456'
             },
             newUser: {
                 displayName: '',
@@ -90,27 +90,45 @@
                 'SET_USER'
             ]),
             createUser() {
-                this.SET_LOADING(true)
-                this.$axios.post('/users', this.newUser)
-                .then(res => {
-                    this.SET_USER(res.data)
+                // this.SET_LOADING(true)
+                // this.$axios.post('/users', this.newUser)
+                // .then(res => {
+                //     this.SET_USER(res.data)
+                //     this.SET_LOADING(false)
+                //     this.$router.push('profile')
+                // })
+                // .catch(error => console.error(error))
+                setTimeout(() => {
+                    this.SET_USER({
+                        displayName: this.newUser.displayName,
+                        email: this.newUser.email,
+                        password: this.newUser.password,
+                    })
                     this.SET_LOADING(false)
                     this.$router.push('profile')
-                })
-                .catch(error => console.error(error))
+                }, 1000)
             },
             login() {
-                this.SET_LOADING(true)
-                this.$axios.post('/users/login', this.$qs.stringify(this.authUser))
-                .then(res => {
-                    this.SET_USER(res.data)
+                setTimeout(() => {
+                    this.SET_USER({
+                        email: this.authUser.email,
+                        password: this.authUser.password
+                    })
                     this.SET_LOADING(false)
                     this.$router.push('profile')
-                })
-                .catch(error => {
-                    console.error(error)
-                    this.SET_LOADING(false)
-                })
+                }, 1000)
+
+                // this.SET_LOADING(true)
+                // this.$axios.post('/users/login', this.$qs.stringify(this.authUser))
+                // .then(res => {
+                //     this.SET_USER(res.data)
+                //     this.SET_LOADING(false)
+                //     this.$router.push('profile')
+                // })
+                // .catch(error => {
+                //     console.error(error)
+                //     this.SET_LOADING(false)
+                // })
             }
         }
     }

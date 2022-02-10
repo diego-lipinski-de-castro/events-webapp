@@ -12,7 +12,7 @@
     "bulma-divider": "^2.0.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.10",
-    "node-sass": "^4.9.0",
+    "node-sass": "^7.0.0",
     "qs": "^6.5.2",
     "register-service-worker": "^1.0.0",
     "sass": "^1.6.1",
